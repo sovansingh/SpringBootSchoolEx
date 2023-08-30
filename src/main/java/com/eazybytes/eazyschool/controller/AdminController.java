@@ -50,6 +50,7 @@ public class AdminController {
 
     @PostMapping("/addNewClass")
     public ModelAndView addNewClass(Model model, @ModelAttribute("eazyClass") EazyClass eazyClass) {
+        
         eazyClassRepository.save(eazyClass);
         ModelAndView modelAndView = new ModelAndView("redirect:/admin/displayClasses");
         return modelAndView;
